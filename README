@@ -1,1 +1,9 @@
-Here lies the README.
+Here lies the README
+
+to run:
+    1.) npm install
+    2.) add to package.json:
+        "scripts": {
+            "start": "webpack-dev-server --mode=development",
+        },
+    3.) npm run start
