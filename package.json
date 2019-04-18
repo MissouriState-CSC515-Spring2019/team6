@@ -1,8 +1,8 @@
 {
-  "name": "515-615-starter-kit",
+  "name": "group_project",
   "version": "1.0.0",
   "description": "Base npm and webpack configuration for homework",
-  "main": "index.js",
+  "main": "./src/js/index.js",
   "scripts": {
     "start": "webpack-dev-server --mode=development",
     "build": "webpack --mode=development"

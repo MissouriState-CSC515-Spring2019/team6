@@ -1,14 +1,10 @@
 'use strict';
 
-// replace spaces with '+'
-let formatParam = function (param) {
-    let string = param.replace(/ /g, "+");
-    return string;
-}
+import { formatURL } from './utility.js';
 
-// call DuckDuckGo API
+// call DuckDuckGo API with given param
 async function search(param) {
-    let search = formatParam(param)
+    let search = formatURL(param)
     let data;
     let url = 'https://api.duckduckgo.com/?q=' + search + '&format=json';
     try {
@@ -28,7 +24,6 @@ async function search(param) {
 let button = document.getElementById('search-button');
 button.addEventListener('click', () => {
     let param = document.getElementById('search-param').value;
-    console.log(param)
     search(param)
         .then((data) => {
             let div = document.getElementById('result-div');
