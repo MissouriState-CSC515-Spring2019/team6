@@ -1,0 +1,28 @@
+{
+  "name": "group_project",
+  "version": "1.0.0",
+  "description": "Base npm and webpack configuration for homework",
+  "main": "./src/js/index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode=development",
+    "build": "webpack --mode=development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/MissouriState-CSC515-Spring2019/starter-kit.git"
+  },
+  "author": "Chad Killingsworth <chadkillingsworth@missouristate.edu>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/MissouriState-CSC515-Spring2019/starter-kit/issues"
+  },
+  "homepage": "https://github.com/MissouriState-CSC515-Spring2019/starter-kit#readme",
+  "dependencies": {
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.28.4",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.2.1"
+  }
+}
