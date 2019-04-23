@@ -1,4 +1,5 @@
-Here lies the README
+`DuckDuckGo API - AngularJS`
+=======================
 
 to run:
 
