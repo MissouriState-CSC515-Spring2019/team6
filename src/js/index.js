@@ -1,5 +1,6 @@
 'use strict';
 
+require('babel-polyfill'); // needed for babel 6
 import { formatURL } from './utility.js';
 
 // call DuckDuckGo API with given param
@@ -14,7 +15,7 @@ async function search(param) {
         data = await response.json()
     }
     catch {
-        throw new Error('Catch Block Reached');
+        throw new Error('Catch Block Reached')
     }
 
     return data;
