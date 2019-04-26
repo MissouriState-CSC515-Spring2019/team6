@@ -35,3 +35,29 @@ button.addEventListener('click', () => {
             div.appendChild(t)
         });
 });
+
+
+//creating translation
+let t_button = document.getElementById('translate-button');
+t_button.addEventListener('click', () => {
+    let param = document.getElementById('tranlater').value;
+    //should put info through translater
+    translate(param)
+        .then((data) => {
+            let div = document.getElementById('translation');
+            while (div.firstChild) {
+                div.removeChild(div.firstChild);
+            }
+            let t = document.createTextNode(JSON.stringify(data));
+            div.appendChild(t)
+        });
+
+
+});
+
+
+//access translater
+async function translate(param) {
+    //needs to be sent through translater
+    return param
+}
