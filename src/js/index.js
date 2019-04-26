@@ -26,7 +26,7 @@ async function search(param) {
             throw new Error(response.statusText);
         data = await response.json()
     }
-    catch {
+    catch(err) {
         throw new Error('Catch Block Reached')
     }
 
@@ -47,7 +47,6 @@ button.addEventListener('click', () => {
             div.appendChild(t)
         });
 });
-
 
 //creating translation
 let t_button = document.getElementById('translate-button');
@@ -76,4 +75,6 @@ async function translate(param) {
     return param
 }
 
-//select language button(here we need a funtion to add option to select language)
+//select language button(here we need a funtion to add option to select language
+
+

@@ -11,5 +11,7 @@ to run:
             "build": "webpack --mode=development"
         },
 
+    3.) > npm install angular
+
     3.) > npm run build
         > npm run start
