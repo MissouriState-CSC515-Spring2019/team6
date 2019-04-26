@@ -3,6 +3,17 @@
 require('babel-polyfill'); // needed for babel 6
 import { formatURL } from './utility.js';
 
+//YandexTranslator (This translators api was easier to work with than google)
+var YandexTranslator = require('yandex.translate');
+//need key to use
+var yandexTranslateKey = 'trnsl.1.1.20190426T162658Z.7ab6b6406b4b1383.3fd9bb63fbcc62a9b084be2668dba88801722207';
+var translator = new YandexTranslator(yandexTranslateKey);
+
+//example of usage
+///translator.translate('hello', 'ru').then(console.log);
+///translator.detect('hello').then(console.log);
+
+
 
 // call DuckDuckGo API with given param
 async function search(param) {
@@ -60,5 +71,9 @@ t_button.addEventListener('click', () => {
 //access translater
 async function translate(param) {
     //needs to be sent through translate
+    translator.detect(param).then(console.log);
+    translator.translate(param, 'ru').then(console.log);
     return param
 }
+
+//select language button(here we need a funtion to add option to select language)
