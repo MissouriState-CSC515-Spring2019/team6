@@ -3,6 +3,7 @@
 require('babel-polyfill'); // needed for babel 6
 import { formatURL } from './utility.js';
 
+
 // call DuckDuckGo API with given param
 async function search(param) {
     let search = formatURL(param)
@@ -58,6 +59,6 @@ t_button.addEventListener('click', () => {
 
 //access translater
 async function translate(param) {
-    //needs to be sent through translater
+    //needs to be sent through translate
     return param
 }
