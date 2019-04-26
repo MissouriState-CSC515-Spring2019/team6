@@ -35,3 +35,10 @@ button.addEventListener('click', () => {
             div.appendChild(t)
         });
 });
+
+//Allows for use of Angular 
+var angular = require('angular');
+//Creates angular module with no dependencies
+var ngModule = angular.module('app', []);
+//logs module information in console
+console.log(ngModule);
