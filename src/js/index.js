@@ -70,9 +70,9 @@ t_button.addEventListener('click', () => {
 //access translater
 async function translate(param) {
     //needs to be sent through translate
-    translator.detect(param).then(console.log);
-    translator.translate(param, 'ru').then(console.log);
-    return param
+    //translator.detect(param).then(console.log);
+    let data = translator.translate(param, 'ru');
+    return data;
 }
 
 //select language button(here we need a funtion to add option to select language
