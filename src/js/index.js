@@ -77,4 +77,9 @@ async function translate(param) {
 
 //select language button(here we need a funtion to add option to select language
 
-
+//Allows for use of Angular 
+var angular = require('angular');
+//Creates angular module with no dependencies
+var ngModule = angular.module('app', []);
+//logs module information in console
+console.log(ngModule);
