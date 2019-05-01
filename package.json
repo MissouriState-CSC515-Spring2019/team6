@@ -1,36 +1,37 @@
 {
-  "name": "group_project",
+  "name": "angular-webpack",
   "version": "1.0.0",
-  "description": "Base npm and webpack configuration for homework",
-  "main": "./src/js/index.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode=development",
-    "build": "webpack --mode=development"
+    "build": "webpack --mode=development",
+    "start": "webpack-dev-server --mode=development"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/MissouriState-CSC515-Spring2019/starter-kit.git"
-  },
-  "author": "Chad Killingsworth <chadkillingsworth@missouristate.edu>",
-  "license": "UNLICENSED",
-  "bugs": {
-    "url": "https://github.com/MissouriState-CSC515-Spring2019/starter-kit/issues"
-  },
-  "homepage": "https://github.com/MissouriState-CSC515-Spring2019/starter-kit#readme",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
+    "@angular/common": "^7.2.14",
+    "@angular/compiler": "^7.2.14",
+    "@angular/compiler-cli": "^7.2.14",
+    "@angular/core": "^7.2.14",
+    "@angular/platform-browser": "^7.2.14",
+    "@angular/platform-browser-dynamic": "^7.2.14",
     "@babel/core": "^7.4.3",
+    "@babel/plugin-proposal-decorators": "^7.4.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
-    "angular": "^1.7.8",
-    "babel-polyfill": "^6.26.0",
-    "html-webpack-plugin": "^3.2.0",
-    "webpack": "^4.28.4",
-    "webpack-dev-server": "^3.1.14",
-    "yandex.translate": "^1.0.1"
-  },
-  "devDependencies": {
-    "babel-core": "^6.26.3",
+    "@ngtools/webpack": "^7.3.8",
     "babel-loader": "^8.0.5",
-    "babel-preset-es2015": "^6.24.1",
-    "webpack-cli": "^3.2.1"
+    "copy-webpack-plugin": "^5.0.3",
+    "ejs": "^2.6.1",
+    "html-webpack-plugin": "^3.2.0",
+    "rxjs": "^6.5.1",
+    "script-ext-html-webpack-plugin": "^2.1.3",
+    "typescript": "^3.1.1",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1",
+    "webpack-dev-server": "^3.3.1",
+    "zone.js": "^0.9.0"
   }
 }
