@@ -1,7 +1,5 @@
-`DuckDuckGo API - Angular`
+`DuckDuckGo & Translation - Angular`
 =======================
-
-to run:
 
     1.) > npm install
 
@@ -11,5 +9,4 @@ to run:
             "build": "webpack --mode=development"
         },
 
-    3.) > npm run build
-        > npm run start
+    3.) > npm run build && npm run start
