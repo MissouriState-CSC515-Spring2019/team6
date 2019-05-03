@@ -54,7 +54,8 @@ let t_button = document.getElementById('translate-button');
 t_button.addEventListener('click', () => {
     let param = document.getElementById('tranlater').value;
     //should put info through translater
-    translate(param)
+    let lang = document.getElementById('language_select').value;
+    translate(param, lang)
         .then((data) => {
             let div = document.getElementById('translation');
             while (div.firstChild) {
@@ -69,10 +70,10 @@ t_button.addEventListener('click', () => {
 
 
 //access translater
-async function translate(param) {
+async function translate(param, la) {
     //needs to be sent through translate
     //translator.detect(param).then(console.log);
-    let data = translator.translate(param, 'ru');
+    let data = translator.translate(param, la);
     return data;
 }
 
