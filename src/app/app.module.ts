@@ -1,13 +1,26 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
-import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { SearchbarComponent } from './searchbar/searchbar.component';
+import { ConfigComponent } from './config/config.component';
+import { DatabaseComponent } from './database/database.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
-    bootstrap: [AppComponent],
-    imports: [BrowserModule],
-    declarations: [AppComponent],
+  declarations: [
+    AppComponent,
+    SearchbarComponent,
+    ConfigComponent,
+    DatabaseComponent,
+    HomeComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
-export class AppModule {
-}
+export class AppModule { }
