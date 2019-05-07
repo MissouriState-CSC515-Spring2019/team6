@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SearchbarService } from '../searchbar.service';
+import { ResultService } from '../result.service';
 
 @Component({
   selector: 'app-searchbar',
@@ -7,12 +9,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchbarComponent implements OnInit {
 
-  constructor() { }
+  input: string = '';
+  formattedUrl: string = "";
+
+  constructor(private searchbarService: SearchbarService,
+    private resultService: ResultService) { }
 
   ngOnInit() {
+    document.getElementById('input').addEventListener('change', () => {
+      this.input = (<HTMLInputElement>document.getElementById('input')).value;
+      this.formattedUrl = this.input.replace(/ /g, '+');
+    });
+    this.setEventListeners();
   }
 
   searchButtonClicked() {
-    console.log('button clicked');
+    this.resultService.updateData(this.formattedUrl);
   }
+
+  setEventListeners() {
+    let elements = document.querySelector('.topnav').getElementsByTagName('a');
+    for (let i = 0; i < elements.length; i++) {
+      elements[i].addEventListener('click', () => {
+        for (let i = 0; i < elements.length; i++) {
+          elements[i].id = '';
+        }
+        let targetElement = event.srcElement as HTMLElement;
+        targetElement.id = 'activated';
+      });
+    }
+  }
+
 }

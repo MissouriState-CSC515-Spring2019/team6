@@ -3,9 +3,10 @@
 <div class="topnav">
   <a routerLink="/home">Home</a>
   <a routerLink="/config">Configuration</a>
-  <a routerLink="/database">Database</a>
+  <a routerLink="/database">API</a>
   <div class="search-container">
-    <input type="text" placeholder="Search.." name="search">
-    <button (click)="searchButtonClicked()"><i class="fa fa-search"></i></button>
+    <input id="input" type="text" placeholder="Search.." name="search">
+    <button (click)="searchButtonClicked()" routerLink="/search/{{input}}">
+      <i class=" fa fa-search"></i></button>
   </div>
 </div>

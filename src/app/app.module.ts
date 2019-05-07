@@ -7,6 +7,9 @@ import { SearchbarComponent } from './searchbar/searchbar.component';
 import { ConfigComponent } from './config/config.component';
 import { DatabaseComponent } from './database/database.component';
 import { HomeComponent } from './home/home.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ResultComponent } from './result/result.component';
+import { SearchbarService } from './searchbar.service';
 
 @NgModule({
   declarations: [
@@ -14,13 +17,15 @@ import { HomeComponent } from './home/home.component';
     SearchbarComponent,
     ConfigComponent,
     DatabaseComponent,
-    HomeComponent
+    HomeComponent,
+    ResultComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [SearchbarService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
