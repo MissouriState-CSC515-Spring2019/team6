@@ -1,12 +1,3 @@
-`DuckDuckGo & Translation - Angular`
-=======================
-
-    1.) > npm install
-
-    2.) add to package.json:
-        "scripts": {
-            "start": "webpack-dev-server --mode=development",
-            "build": "webpack --mode=development"
-        },
-
-    3.) > npm run build && npm run start
+# Search Engine with Translation and Database
+* npm install
+* ng serve --open
