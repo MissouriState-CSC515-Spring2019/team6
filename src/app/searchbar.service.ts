@@ -7,5 +7,5 @@ import { Observable } from 'rxjs';
 })
 export class SearchbarService {
 
-  constructor(private http: HttpClient) { }
+  constructor() { }
 }

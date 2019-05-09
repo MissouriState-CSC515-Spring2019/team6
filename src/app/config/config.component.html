@@ -1,17 +1,11 @@
-<h1>Choose A Language</h1>
-<label class="container">English
-  <input type="radio" checked="checked" name="radio">
-  <span class="checkmark"></span>
-</label>
-<label class="container">Spanish
-  <input type="radio" name="radio">
-  <span class="checkmark"></span>
-</label>
-<label class="container">French
-  <input type="radio" name="radio">
-  <span class="checkmark"></span>
-</label>
-<label class="container">Italian
-  <input type="radio" name="radio">
-  <span class="checkmark"></span>
-</label>
+<app-searchbar></app-searchbar>
+<div class="dropdown">
+  <button class="dropbtn">Choose Language ↓</button>
+  <div class="dropdown-content">
+    <a routerLink='/config/English' (click)=changeLanguage()>English</a>
+    <a routerLink='/config/Russian' (click)=changeLanguage()>Russian</a>
+    <a routerLink='/config/Japanese' (click)=changeLanguage()>Japanese</a>
+    <a routerLink='/config/Spanish' (click)=changeLanguage()>Spanish</a>
+    <a routerLink='/config/Korean' (click)=changeLanguage()>Korean</a>
+  </div>
+</div>
