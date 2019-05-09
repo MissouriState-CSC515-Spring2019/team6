@@ -6,11 +6,11 @@ import { HomeComponent } from './home/home.component'
 import { ResultComponent } from './result/result.component'
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'database', component: DatabaseComponent },
-  { path: 'config', component: ConfigComponent },
-  { path: 'search/:id', component: ResultComponent }
+  { path: '', redirectTo: '/home/English', pathMatch: 'full' },
+  { path: 'home/:lang', component: HomeComponent },
+  { path: 'database/:lang', component: DatabaseComponent },
+  { path: 'config/:lang', component: ConfigComponent },
+  { path: 'search/:lang/:param', component: ResultComponent }
 ];
 
 @NgModule({

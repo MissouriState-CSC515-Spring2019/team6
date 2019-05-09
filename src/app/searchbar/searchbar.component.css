@@ -5,8 +5,13 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-#activated {
-  background-color: aqua;
+#displayLanguage {
+  font-weight: bolder;
+  padding-left: 50px;
+  padding-top: 10px;
+  font-size: 125%;
+  display:inline-block;
+  color: purple;
 }
 
 .topnav {
@@ -59,3 +64,4 @@ body {
 .topnav .search-container button:hover {
   background: #ccc;
 }
+
