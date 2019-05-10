@@ -2,7 +2,10 @@
 * npm install
 * ng serve --open
 
-#Translation Tool
+# Unit Testing
+* ng test
+
+# Translation Tool
 * yandex translator
 * npm install yandex.translate
 # Useful websites
