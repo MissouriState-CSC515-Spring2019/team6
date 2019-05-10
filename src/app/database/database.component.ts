@@ -29,7 +29,7 @@ export class DatabaseComponent implements OnInit {
     }
   }
 
-  searchButtonClicked()
+  stringButtonClicked()
   {
     var doc = new XMLHttpRequest();
     doc.open('GET', './assets/api.txt');
