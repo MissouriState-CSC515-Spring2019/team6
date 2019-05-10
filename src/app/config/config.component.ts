@@ -11,9 +11,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConfigComponent implements OnInit {
 
+  languages: Array<string> = ['English', 'Russian', 'Japanase', 'Spanish', 'Korean'];
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  changeLanguage() {
+    //this.SearchbarComponent.updateSearchBarLang();
+  }
 }

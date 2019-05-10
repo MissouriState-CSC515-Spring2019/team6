@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { SearchbarService } from '../searchbar.service';
 import { ResultService } from '../result.service';
+import { ConfigService } from '../config.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-searchbar',
@@ -10,34 +12,27 @@ import { ResultService } from '../result.service';
 export class SearchbarComponent implements OnInit {
 
   input: string = '';
-  formattedUrl: string = "";
+  formattedUrl: string = '';
+  searchbarLang: string;
 
-  constructor(private searchbarService: SearchbarService,
-    private resultService: ResultService) { }
+  constructor(private configService: ConfigService,
+    private resultService: ResultService,
+    private route: ActivatedRoute) { }
 
   ngOnInit() {
     document.getElementById('input').addEventListener('change', () => {
       this.input = (<HTMLInputElement>document.getElementById('input')).value;
       this.formattedUrl = this.input.replace(/ /g, '+');
     });
-    this.setEventListeners();
+    this.searchbarLang = this.route.snapshot.params['lang'];
   }
 
   searchButtonClicked() {
     this.resultService.updateData(this.formattedUrl);
   }
 
-  setEventListeners() {
-    let elements = document.querySelector('.topnav').getElementsByTagName('a');
-    for (let i = 0; i < elements.length; i++) {
-      elements[i].addEventListener('click', () => {
-        for (let i = 0; i < elements.length; i++) {
-          elements[i].id = '';
-        }
-        let targetElement = event.srcElement as HTMLElement;
-        targetElement.id = 'activated';
-      });
-    }
+  public updateSearchBarLang(): void {
+    this.searchbarLang = this.route.snapshot.params['lang'];
   }
 
 }
