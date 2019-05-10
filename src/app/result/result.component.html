@@ -1,4 +1,4 @@
 <app-searchbar></app-searchbar>
-<p>
-  {{ resultService.JSONData }}
-</p>
+<div *ngIf="fetchedData">
+  {{ jsonData }}
+</div>

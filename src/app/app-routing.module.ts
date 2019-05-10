@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: 'home/:lang', component: HomeComponent },
   { path: 'database/:lang', component: DatabaseComponent },
   { path: 'config/:lang', component: ConfigComponent },
-  { path: 'search/:lang/:param', component: ResultComponent }
+  { path: 'search/:lang/POD', component: ResultComponent }
 ];
 
 @NgModule({
