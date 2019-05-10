@@ -27,8 +27,20 @@ export class DatabaseComponent implements OnInit {
       document.getElementById("Json").innerHTML = database;
       
     }
+  }
 
-    
+  searchButtonClicked()
+  {
+    var doc = new XMLHttpRequest();
+    doc.open('GET', './assets/api.txt');
+    doc.responseType = 'text';
+    doc.send();
+
+    doc.onload = function()
+    {
+      var text = doc.response;
+      document.getElementById("Json").innerHTML = text;
+    }
   }
 
 }
