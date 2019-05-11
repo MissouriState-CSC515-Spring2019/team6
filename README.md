@@ -3,7 +3,7 @@ The purpose of this assignment is to establish a single page search engine appli
 The search engine features a home, configuration, and API page. The Configuration page is for the user to select their language of choice.
 The API page gives the user the ability to hit an API and String button that outputs sample data from a JSON and txt file respectively.
 
-#How to Set Up
+# How to Set Up
 * npm install
 * ng serve --open
 
@@ -18,5 +18,5 @@ The API page gives the user the ability to hit an API and String button that out
 * https://github.com/nkt/yandex.translate
 * https://tech.yandex.com/translate/doc/dg/concepts/api-overview-docpage/
 
-#Known Bugs
+# Known Bugs
 *None 
