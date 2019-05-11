@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SearchbarService } from '../searchbar.service';
 import { ResultService } from '../result.service';
-import { ConfigService } from '../config.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -13,26 +12,23 @@ export class SearchbarComponent implements OnInit {
 
   input: string = '';
   formattedUrl: string = '';
-  searchbarLang: string;
+  searchbarRes: string = 'highRes';
 
-  constructor(private configService: ConfigService,
+  constructor(private searchbarService: SearchbarService,
     private resultService: ResultService,
     private route: ActivatedRoute) { }
 
   ngOnInit() {
-    document.getElementById('input').addEventListener('change', () => {
-      this.input = (<HTMLInputElement>document.getElementById('input')).value;
-      this.formattedUrl = this.input.replace(/ /g, '+');
-    });
-    this.searchbarLang = this.route.snapshot.params['lang'];
+    this.searchbarService.updateResolution(this.route.snapshot.params['res']);
+    this.searchbarRes = this.searchbarService.resolution;
   }
 
   searchButtonClicked() {
-    this.resultService.updateData(this.formattedUrl);
+    // this.resultService.updateData(this.formattedUrl);
   }
 
-  public updateSearchBarLang(): void {
-    this.searchbarLang = this.route.snapshot.params['lang'];
+  public updateSearchBarRes(): void {
+    console.log(this.route.snapshot.params['res']);
+    this.searchbarRes = this.route.snapshot.params['res'];
   }
-
 }
