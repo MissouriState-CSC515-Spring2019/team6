@@ -8,12 +8,12 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class SearchbarService {
 
-  language: string = 'English';
+  resolution: string = 'English';
 
   constructor(private route: ActivatedRoute) {
   }
 
-  updateLanguage(newLang: string) {
-    this.language = newLang;
+  updateResolution(newLang: string) {
+    this.resolution = newLang;
   }
 }

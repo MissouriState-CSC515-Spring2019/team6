@@ -12,23 +12,23 @@ export class SearchbarComponent implements OnInit {
 
   input: string = '';
   formattedUrl: string = '';
-  searchbarLang: string = 'English';
+  searchbarRes: string = 'highRes';
 
   constructor(private searchbarService: SearchbarService,
     private resultService: ResultService,
     private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.searchbarService.updateLanguage(this.route.snapshot.params['lang']);
-    this.searchbarLang = this.searchbarService.language;
+    this.searchbarService.updateResolution(this.route.snapshot.params['res']);
+    this.searchbarRes = this.searchbarService.resolution;
   }
 
   searchButtonClicked() {
     // this.resultService.updateData(this.formattedUrl);
   }
 
-  public updateSearchBarLang(): void {
-    console.log(this.route.snapshot.params['lang']);
-    this.searchbarLang = this.route.snapshot.params['lang'];
+  public updateSearchBarRes(): void {
+    console.log(this.route.snapshot.params['res']);
+    this.searchbarRes = this.route.snapshot.params['res'];
   }
 }

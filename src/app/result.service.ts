@@ -10,6 +10,7 @@ import { Observable } from 'rxjs';
 export class ResultService {
 
   JSONData: Object;
+  language: string;
 
   constructor(private http: HttpClient, private route: ActivatedRoute) {
   }

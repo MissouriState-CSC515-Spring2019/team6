@@ -1,12 +1,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div class="topnav">
-  <a routerLink="/home/{{searchbarService.language}}" id="activated">Home</a>
-  <a routerLink="/config/{{searchbarService.language}}">Configuration</a>
-  <a routerLink="/database/{{searchbarService.language}}">API</a>
-  <span>NASA Pic of the Day</span>
+  <a routerLink="/home/{{searchbarService.resolution}}" id="activated">Home</a>
+  <a routerLink="/config/{{searchbarService.resolution}}">Configuration</a>
+  <a routerLink="/database/{{searchbarService.resolution}}">API</a>
   <div class="search-container">
-    <span id="displayLanguage">Language: {{ searchbarLang }}</span>
-    <button (click)="searchButtonClicked()" routerLink="/search/{{searchbarService.language}}/POD">
+    <span id="displayResolution">Resolution: {{ searchbarRes }}</span>
+    <span id="detail">Search NASA Pic of the Day</span>
+    <button (click)="searchButtonClicked()" routerLink="/search/{{searchbarService.resolution}}/POD">
       <i class=" fa fa-search"></i></button>
   </div>
 </div>

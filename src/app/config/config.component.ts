@@ -1,10 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SearchbarService } from '../searchbar.service';
-
-// var YandexTranslator = require('yandex.translate');
-// var yandexTranslateKey = 'trnsl.1.1.20190426T162658Z.7ab6b6406b4b1383.3fd9bb63fbcc62a9b084be2668dba88801722207';
-// var translator = new YandexTranslator(yandexTranslateKey);
-
+import { ResultService } from '../result.service';
 @Component({
   selector: 'app-config',
   templateUrl: './config.component.html',
@@ -12,12 +7,13 @@ import { SearchbarService } from '../searchbar.service';
 })
 export class ConfigComponent implements OnInit {
 
-  constructor(private searchbarService: SearchbarService) { }
+  constructor(private resultService: ResultService) { }
 
   ngOnInit() {
   }
 
-  changeLanguage(e: Event) {
+  changeRes(e: Event) {
     let target = e.srcElement;
+    console.log(target);
   }
 }

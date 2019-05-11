@@ -1,0 +1,24 @@
+ul {
+    list-style-type: none;
+}
+
+#title {
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+#hdurl {
+    padding-bottom: 10px;
+}
+
+#copyright {
+    padding-bottom: 10px;
+}
+
+#date {
+    padding-bottom: 10px;
+}
+
+#explanation {
+    padding-bottom: 10px;
+}
